@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>nginx功能 | 微服务部署学习</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="微服务部署学习">
+    
+    <link rel="preload" href="/m_microservices/assets/css/0.styles.40b1a2a3.css" as="style"><link rel="preload" href="/m_microservices/assets/js/app.acc81fd3.js" as="script"><link rel="preload" href="/m_microservices/assets/js/2.5d075586.js" as="script"><link rel="preload" href="/m_microservices/assets/js/13.6f984ad9.js" as="script"><link rel="prefetch" href="/m_microservices/assets/js/10.81525143.js"><link rel="prefetch" href="/m_microservices/assets/js/11.3d92c7b4.js"><link rel="prefetch" href="/m_microservices/assets/js/12.168b256c.js"><link rel="prefetch" href="/m_microservices/assets/js/14.f230cc96.js"><link rel="prefetch" href="/m_microservices/assets/js/15.68d27749.js"><link rel="prefetch" href="/m_microservices/assets/js/16.dfe7e6d6.js"><link rel="prefetch" href="/m_microservices/assets/js/17.b6232007.js"><link rel="prefetch" href="/m_microservices/assets/js/3.a9c84adc.js"><link rel="prefetch" href="/m_microservices/assets/js/4.80a1182c.js"><link rel="prefetch" href="/m_microservices/assets/js/5.9910cc1b.js"><link rel="prefetch" href="/m_microservices/assets/js/6.c38b2f04.js"><link rel="prefetch" href="/m_microservices/assets/js/7.bcbe6134.js"><link rel="prefetch" href="/m_microservices/assets/js/8.98adcd31.js"><link rel="prefetch" href="/m_microservices/assets/js/9.fe947486.js">
+    <link rel="stylesheet" href="/m_microservices/assets/css/0.styles.40b1a2a3.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/m_microservices/" class="home-link router-link-active"><!----> <span class="site-name">微服务部署学习</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/m_microservices/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/m_microservices/" class="nav-link">
+  首页
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="博客" class="dropdown-title"><span class="title">博客</span> <span class="arrow down"></span></button> <button type="button" aria-label="博客" class="mobile-dropdown-title"><span class="title">博客</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/mqyqingfeng" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  Github
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://juejin.cn/user/712139234359182/posts" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  掘金
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav>  <ul class="sidebar-links"><li><section class="sidebar-group depth-0"><a href="/m_microservices/linuxbase/linuxbase.html" class="sidebar-heading clickable"><span>linux基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/linuxbase/linuxbase.html" class="sidebar-link">常用命令</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/dockerbase/dockerbase.html" class="sidebar-heading clickable"><span>docker基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/dockerbase/dockerbase.html" class="sidebar-link">docker命令</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/nginxbase/nginxbase.html" aria-current="page" class="sidebar-heading clickable router-link-exact-active router-link-active open active"><span>nginx基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/nginxbase/nginxbase.html" aria-current="page" class="active sidebar-link">nginx基础</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/m_microservices/nginxbase/nginxbase.html#nginx功能" class="sidebar-link">nginx功能</a></li><li class="sidebar-sub-header"><a href="/m_microservices/nginxbase/nginxbase.html#暴露端口" class="sidebar-link">暴露端口</a></li></ul></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/nomadbase/nomadbase.html" class="sidebar-heading clickable"><span>Nomad基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/nomad/nomadbase.html" class="sidebar-link">nomad基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/consul/consulbase.html" class="sidebar-heading clickable"><span>Consul基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/consul/consulbase.html" class="sidebar-link">consul基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/kong/kongbase.html" class="sidebar-heading clickable"><span>Kong基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/kong/kongbase.html" class="sidebar-link">kong基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/konga/kongabase.html" class="sidebar-heading clickable"><span>Konga基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/konga/kongabase.html" class="sidebar-link">konga基础</a></li></ul></section></li><li><section class="sidebar-group depth-0"><a href="/m_microservices/webGL/webGL.html" class="sidebar-heading clickable"><span>WebGL基础</span> <!----></a> <ul class="sidebar-links sidebar-group-items"><li><a href="/m_microservices/webGL/webGL.html" class="sidebar-link">webGL基础</a></li><li><a href="/m_microservices/webGL/graph.html" class="sidebar-link">绘制图形</a></li><li><a href="/m_microservices/webGL/matrixTransform.html" class="sidebar-link">矩阵变换</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h2 id="nginx功能"><a href="#nginx功能" class="header-anchor">#</a> nginx功能</h2> <p>对于前端来讲，nginx可以作为反向代理暴露前端服务</p> <div class="language-# extra-class"><pre class="language-text"><code>server {
+
+    listen 80;
+
+    server_name localhost;
+
+        location / {
+
+            root    /app;	#root：用于指定访问根目录时，访问虚拟主机的web目录,对于容器来讲是容器内的代码目录
+             
+             proxy_pass http://localhost:8888;#proxy_pass：反向代理配置
+             
+            index     index.html index.htm;
+    
+        }
+
+   }
+</code></pre></div><p>nginx配置文件的路径/etc/nginx</p> <h2 id="暴露端口"><a href="#暴露端口" class="header-anchor">#</a> 暴露端口</h2> <div class="language-# extra-class"><pre class="language-text"><code>server {
+
+        listen  2022;
+        listen  [::]:2022;
+        server_name docx;
+
+        location / {
+                root  /app;
+                index index.html index.htm;
+        }
+         error_page   500 502 503 504  /50x.html;
+                location = /50x.html {
+                root   /usr/share/nginx/html;
+         }
+
+
+}
+</code></pre></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/m_microservices/dockerbase/dockerbase.html" class="prev">
+        docker命令
+      </a></span> <span class="next"><a href="/m_microservices/nomad/nomadbase.html">
+        nomad基础
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/m_microservices/assets/js/app.acc81fd3.js" defer></script><script src="/m_microservices/assets/js/2.5d075586.js" defer></script><script src="/m_microservices/assets/js/13.6f984ad9.js" defer></script>
+  </body>
+</html>
